@@ -9,14 +9,13 @@
  http://www.springframework.org/schema/context/spring-context.xsd">
 <!-- 	This is our beans -->
     <context:annotation-config />
- 	 <bean class="com.springcore.lifecycle.Pasty" name="pasty" init-method="init" destroy-method="destroy">
-	 	<property name="price" value="250"/>
+
+ 	 <bean class="com.springcore.autowire.Address" name="address">
+	 	<property name="street" value="Sirdi temple"/>
+	 	<property name="post" value="Gwalior"/>
+	 	
 	 </bean>
-	 <bean class="com.springcore.lifecycle.Pizza" name="pizza">
-	 	<property name="price" value="650"/>
-	 	<property name="size" value="Medium"/>
-	 </bean>
-	 <bean class="com.springcore.lifecycle.Vegi" name="vegi">
-	 	<property name="name" value="Brinjal"/>
-	 </bean>
- </beans>
+	 <bean class="com.springcore.autowire.Student" name="student" />
+<!-- 	 autowire="byName"/>
+ -->
+  </beans>
